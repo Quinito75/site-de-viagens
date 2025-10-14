@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: blueviolet;
+    color: white; /* Muda o texto para branco */
+    display: flex; /* deixa os itens dispostos em fila */
+    align-items: center; /*centraliza verticalmente os itens */
+
+
+}
+
+nav {
+margin-left: auto; /* deixa a nav a direita do header */
+margin-right: 30px;
+}
+
+nav ul {
+    list-style-type: none; /* retira bullet points da lista */
+    display: flex; /* deixa os itens dispostos em fila */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* retira linha sublihado */
+    color: white; /* Muda o texto para branco */
+    transition: color 0.3s ease; /* faz com que a mudança de cor ocorra gradualmente */
+}
+
+nav ul li a:hover {
+    color: #ff9800; /* Cor de hover */
+}
+
+header p {
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
