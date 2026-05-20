@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Texto da página em Português-BR -->
+<head>
+    <meta charset="UTF-8"> <!-- Configuração de letra -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Validação - Horizon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="../js/validacao.js" defer></script>
+
+    <!-- Necessário para subir um diretório e acessar o CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/contato.css">
+</head>
+<body>
+<header> <!--Parte superior do site, contendo nome e botões que irão redirecionar a outro site-->
+    <div class="logo"></div> <!--Div que vai virar logo -->
+    <p>Horizon</p>
+    <nav>
+        <ul>
+            <li><a class="btn-demo" href="../../index.html">Início</a></li>
+            <li><a class="btn-demo" href="contato.html">Voltar</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="validacao-container">
+    <div class="validacao-card">
+        <div class="success-icon">✓</div>
+        <h2>Dados Enviados!</h2>
+        <p class="subtitle">Recebemos sua mensagem com sucesso. Aqui estão as informações enviadas:</p>
+        
+        <div class="info-group">
+            <span class="info-label">Nome Completo</span>
+            <span id="mostra-nome" class="info-value"></span>
+        </div>
+        
+        <div class="info-group">
+            <span class="info-label">E-mail</span>
+            <span id="mostra-email" class="info-value"></span>
+        </div>
+        
+        <div class="info-group">
+            <span class="info-label">Telefone</span>
+            <span id="mostra-telefone" class="info-value"></span>
+        </div>
+        
+        <div class="info-group">
+            <span class="info-label">Mensagem / Projetos</span>
+            <span id="mostra-comentarios" class="info-value"></span>
+        </div>
+        
+        <a href="../../index.html" class="btn-demo btn-back">Voltar ao Início</a>
+    </div>
+</main>
+
+<footer class="footer">
+  <!-- Contém todo o conteúdo do rodapé -->
+  <div class="footer-container">
+    <!-- Texto com o nome da empresa e direitos autorais -->
+    <p><strong>© Horizon Tecnologia LTDA.</strong></p>
+    <!-- Lista com os links do rodapé -->
+    <ul class="footer-links">
+        <li><a href="../../index.html">Página inicial</a></li>        <!-- Link para a página "Página inicial" -->
+        <li><a href="contato.html">Contato</a></li>        <!-- Link para a página "Contato" -->
+        <li><a href="sobre.html">Sobre nós</a></li>        <!-- Link para a seção "Sobre nós" -->
+    </ul>
+  </div>
+  <!-- Fim do container -->
+</footer>
+<!-- Fim do rodapé -->
+ 
+</body>
+</html>

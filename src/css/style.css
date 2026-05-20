@@ -1,24 +1,48 @@
+
 body {
     margin: 0;
+    background-color: #0f071a;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
 }
 
 header {
-    background-color: blueviolet;
-    color: white; /* Muda o texto para branco */
-    display: flex; /* deixa os itens dispostos em fila */
-    align-items: center; /*centraliza verticalmente os itens */
+    background-color: rgba(255, 255, 255, 0.95);
+    color: black;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    border-radius: 6px;
+}
 
+.logo::before {  /* Logo feita com IA */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, transparent 48%, white 50%, white 52%, transparent 54%);
 }
 
 nav {
-margin-left: auto; /* deixa a nav a direita do header */
-margin-right: 30px;
+    margin-right: 2rem;
+    margin-left: auto;
 }
 
 nav ul {
-    list-style-type: none; /* retira bullet points da lista */
-    display: flex; /* deixa os itens dispostos em fila */
+    list-style-type: none;
+    display: flex;
 }
 
 nav ul li {
@@ -26,17 +50,413 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none; /* retira linha sublihado */
-    color: white; /* Muda o texto para branco */
-    transition: color 0.3s ease; /* faz com que a mudança de cor ocorra gradualmente */
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #ff9800; /* Cor de hover */
+    color: rgb(162, 0, 255);
 }
 
 header p {
-    margin-left: 30px;
-    font-size: 30px;
+    margin-left: 0rem;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* --- Responsivo: Header --- */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    header p {
+        font-size: 22px;
+    }
+
+    nav {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+}
+
+.btn-demo {
+  background-color: blueviolet;
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+  cursor: pointer;
+}
+
+.btn-demo:hover {
+  background-color: rgb(156, 28, 235);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+}
+
+.btn-demo:active {
+  background-color: rgb(136, 19, 194);
+  transform: translateY(0);
+}
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.primeirasessao {
+    background-image: linear-gradient(rgba(15, 7, 26, 0.7), rgba(15, 7, 26, 0.85)),
+                      url('../images/plane.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 6em 3em;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2em;
+    margin: 0;
+    align-items: center;
+}  
+
+.primeirasessao .left {
+    background-color: rgba(24, 8, 40, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5em;
+    margin: 1em;
+    padding: 2.5em;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.primeirasessao .right article {
+    background-color: rgba(24, 8, 40, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1.2em;
+    margin: 1em;
+    padding: 1.5em;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.primeirasessao .right article:hover {
+    transform: translateY(-4px);
+    border-color: rgba(192, 132, 252, 0.4);
+}
+
+.primeirasessao .left h1 {
+    font-weight: 800;
+    font-size: 46px;
+    color: #ffffff;
+    margin: 0 0 0.4em 0;
+    line-height: 1.25;
+}
+
+#textoroxo {
+    color: #c084fc;
+}
+
+.primeirasessao .left p {
+    font-size: 18px;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.primeirasessao .right article p {
+    font-size: 16px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.primeirasessao .right article h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f3e8ff;
+    margin: 0 0 0.4em 0;
+}
+
+.beneficios {
+    list-style-type: none;
+    display: flex;
+    gap: 2.5em;
+    padding: 0;
+    margin-top: 2em;
+}
+
+.beneficios li {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.4;
+}
+
+.beneficios li strong {
+    color: #c084fc;
+    font-size: 24px;
+    display: block;
+    font-weight: 800;
+    margin-bottom: 0.2em;
+}
+
+/* --- Responsivo: Primeira Sessão --- */
+@media (max-width: 900px) {
+    .primeirasessao {
+        grid-template-columns: 1fr;
+        padding: 4em 1.5em;
+    }
+
+    .primeirasessao .left h1 {
+        font-size: 34px;
+    }
+
+    .beneficios {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}
+
+.segundasessao {
+    background-color: rgb(43, 7, 78);
+    padding: 5em 3em;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2em;
+    margin: 0;
+    align-items: center;
+}  
+
+.segundasessao .left {
+    background-color: rgba(24, 8, 40, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5em;
+    margin: 1em;
+    padding: 2.5em;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.segundasessao .left h2 {
+    font-weight: 800;
+    font-size: 38px;
+    color: #ffffff;
+    margin: 0 0 0.5em 0;
+    line-height: 1.3;
+}
+
+.segundasessao .left p { 
+    font-size: 18px;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.segundasessao .left ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1.5em;
+}
+
+.segundasessao .left ul li {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin: 0.8em 0;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.segundasessao .left ul li::before {
+    content: "✓";
+    color: #c084fc;
+    position: absolute;
+    left: 0;
     font-weight: bold;
+}
+
+.segundasessao .right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 1em;
+}
+
+.segundasessao .right article {
+    background-color: rgba(24, 8, 40, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1.2em;
+    padding: 1.5em;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.segundasessao .right article:hover {
+    transform: translateY(-4px);
+    border-color: rgba(192, 132, 252, 0.4);
+}
+
+.segundasessao .right h3 {
+    font-weight: 700;
+    font-size: 20px;
+    color: #f3e8ff;
+    margin: 0 0 0.4em 0;
+}
+
+.segundasessao .right p {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Responsivo: Segunda Sessão --- */
+@media (max-width: 900px) {
+    .segundasessao {
+        grid-template-columns: 1fr;
+        padding: 4em 1.5em;
+        margin: 0;
+    }
+
+    .segundasessao .right {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .segundasessao .left h2 {
+         font-size: 30px;
+    }
+}
+
+.terceirasessao { 
+    background-image: linear-gradient(rgba(15, 7, 26, 0.75), rgba(15, 7, 26, 0.9)),
+                      url('../images/call center.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 6em 3em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.terceirasessao .centro { 
+    background-color: rgba(24, 8, 40, 0.85); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5em;
+    width: 60%;
+    max-width: 800px;
+    margin: auto;
+    padding: 3em;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.terceirasessao .centro h2 { 
+    font-weight: 800;
+    font-size: 38px; 
+    color: #ffffff;
+    margin: 0 0 0.5em 0; 
+}
+
+.terceirasessao .centro p { 
+    font-size: 18px; 
+    color: #cbd5e1;
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+
+.terceirasessao .centro ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 2em 0; 
+}
+
+.terceirasessao .centro ul li {
+    font-size: 16px;
+    color: #e2e8f0;
+    margin: 12px 0;
+    padding-left: 28px;
+    position: relative;
+}
+
+.terceirasessao .centro ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00ff2a;
+    font-weight: bold;
+}
+
+.terceirasessao .centro .btn-demo {
+    margin-top: 0.6em;
+    display: inline-block;
+}
+
+/* --- Responsivo: Terceira Sessão --- */
+@media (max-width: 900px) {
+    .terceirasessao {
+        padding: 4em 1.5em;
+    }
+
+    .terceirasessao .centro {
+        width: 100%;
+        padding: 2em 1.5em;
+    }
+
+    .terceirasessao .centro h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* Estilo principal do rodapé */
+footer {
+  height: 54px;
+  position: relative;
+  background-color: white; /* Cor de fundo roxa */
+  color: rgb(0, 0, 0);             /* Cor de @Horizon Tecnologia LTDA*/
+  text-align: center;           /* Centraliza o texto e os links */
+  padding: 0px 0px;             /* Espaçamento interno (em cima e em baixo) */
+  bottom: 0;                  /* Posiciona o rodapé no fundo */
+  width: 100%;               /* Faz o rodapé ocupar toda a largura da página */
+}
+
+footer p {
+  margin: 0;                  /* Remove a margem padrão do parágrafo */
+}
+
+/* Define o container interno do rodapé */
+.footer-container {
+  max-width: 1200px; /* Define uma largura máxima */
+  margin: 0 auto; /* Centraliza o conteúdo dentro do rodapé */
+}
+
+.footer-container p {
+  height: 10px;
+}
+
+/* Remove a formatação padrão da lista e organiza os links */
+.footer-links {
+  list-style: none;             /* Remove os marcadores da lista */
+  padding: 0;                  /* Remove o espaçamento interno */
+  margin: 15px 0 0 0;          /* Define uma margem superior de 15px */
+  display: flex;             /* Usa o modelo flexbox para organizar os itens */
+  justify-content: center;  /* Centraliza os Links horizontalmente */
+  flex-wrap: wrap;         /* Permite que os links quebrem linha se a tela for pequena*/
+  gap: 15px;               /* Define um espaçamento entre os links */
+}
+
+/* Estiliza os links do rodapé */
+.footer-links a {
+  color: rgb(0, 0, 0);        /* Cor branca para os links Página inicial e Sobre */
+  text-decoration: none;    /* Remove o sublinhado */
+  font-weight: 500;        /* Define uma espessura média da fonte */
+  transition: color 0.3s; /* Cria um efeito de transição suave ao passar o mouse*/
+}
+
+/* Efeito de hover (quando o utilizador passa o mouse sobre o link) */
+.footer-links a:hover {
+  color: blueviolet; /* Cor visível quando o mouse estiver em cima de Solução, Benefícios, como funciona e Contato */
 }

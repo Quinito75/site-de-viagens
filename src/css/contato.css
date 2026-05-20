@@ -1,0 +1,430 @@
+/* Horizon - Contact and Validation Stylesheet */
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0f071a;
+  background-image: linear-gradient(rgba(15, 7, 26, 0.85), rgba(15, 7, 26, 0.95));
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  border-radius: 6px;
+}
+
+.logo::before {  /* Logo feita com IA */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, transparent 48%, white 50%, white 52%, transparent 54%);
+}
+
+nav {
+  margin-right: 2rem;
+  margin-left: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(162, 0, 255);
+}
+
+header p {
+  margin-left: 0rem;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.btn-demo {
+  background-color: blueviolet;
+  color: white !important;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+}
+
+.btn-demo:hover {
+  background-color: rgb(156, 28, 235);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+}
+
+.btn-demo:active {
+  background-color: rgb(136, 19, 194);
+  transform: translateY(0);
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.caixa-de-contato {
+  animation: fadein 1.2s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1100px;
+  width: 90%;
+  margin: 4em auto;
+}
+
+/* Bloco Esquerda (Contato Info) */
+.bloco-esquerda {
+  flex: 1;
+  background: rgba(24, 8, 40, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.bloco-esquerda h2 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.bloco-esquerda p {
+  font-size: 16px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+}
+
+.bloco-esquerda-mail {
+  color: white;
+  background: rgba(138, 43, 226, 0.15);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bloco-esquerda-mail p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #e2e8f0;
+}
+
+/* Bloco Direita (Formulário) */
+.bloco-direita {
+  flex: 1.2;
+  background: rgba(24, 8, 40, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.bloco-direita h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.bloco-direita form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.bloco-direita label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #c084fc;
+  margin-bottom: -0.8rem;
+  text-align: left;
+}
+
+.bloco-direita input,
+.bloco-direita textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bloco-direita input::placeholder,
+.bloco-direita textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.bloco-direita input:focus,
+.bloco-direita textarea:focus {
+  outline: none;
+  border-color: #c084fc;
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.animado {
+  background-color: blueviolet;
+  color: white;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+  cursor: pointer;
+  margin-top: 1rem;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.animado:hover {
+  background-color: rgb(156, 28, 235);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.4);
+}
+
+.animado:active {
+  background-color: rgb(136, 19, 194);
+  transform: translateY(0);
+}
+
+/* --- Estilos da Página de Validação --- */
+.validacao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 4rem 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.validacao-card {
+  background: rgba(24, 8, 40, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: fadein 1.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid #10b981;
+  color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.validacao-card h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.validacao-card .subtitle {
+  font-size: 16px;
+  color: #cbd5e1;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.5;
+}
+
+.info-group {
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.info-group:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2.5rem;
+}
+
+.info-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c084fc;
+  font-weight: 700;
+}
+
+.info-value {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.btn-back {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* --- Responsividade Geral --- */
+@media (max-width: 800px) {
+  .caixa-de-contato {
+    flex-direction: column;
+    width: 95%;
+    margin: 2em auto;
+    gap: 20px;
+  }
+
+  .bloco-esquerda,
+  .bloco-direita {
+    padding: 2rem 1.5rem;
+    width: auto;
+  }
+
+  .bloco-esquerda h2 {
+    font-size: 26px;
+  }
+
+  .validacao-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .validacao-card h2 {
+    font-size: 26px;
+  }
+}
+
+/* Estilo principal do rodapé */
+footer {
+  height: auto;
+  min-height: 60px;
+  position: relative;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 1.5rem 0;
+  width: 100%;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 0 0 0.5rem 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: blueviolet;
+}

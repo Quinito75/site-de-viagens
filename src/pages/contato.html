@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Texto da página em Português-BR -->
+<head>
+    <meta charset="UTF-8"> <!-- Configuração de letra -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <script src="../js/contato.js" defer></script>
+
+    <!-- Necessário para subir um diretório e acessar o CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/contato.css">
+</head>
+<body>
+
+<header> <!--Parte superior do site, contendo nome e butões que irão redirecionar a outro site-->
+    <div class="logo"></div> <!--Div que vai virar logo -->
+    <p>Horizon</p>
+    <nav>
+        <ul>
+            <li><a class="btn-demo" href="../../index.html">Inicio</a></li>
+            <li><a class="btn-demo" href="sobre.html">Sobre nós</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="caixa-de-contato">
+
+        <div class="bloco-esquerda">
+            <h2>Chama a gente!<br> Conta pra nós sobre seu projeto!</h2><br><br>
+                <p>Vamos criar algo juntos ⬇️</p>
+            <div class="bloco-esquerda-mail">
+                <p><strong>contato@horizon.com.br</strong></p>
+            </div>
+        </div>
+
+        <div class="bloco-direita">
+            <h2>Entre em contato conosco 📩</h2>
+
+            <form id="form-contato" method="post">
+
+                <label for="nome">Nome completo*</label><br> 
+                <input type="text" id = "nome" name="nome" placeholder = "Digite seu nome completo"><br>
+                
+                <label for="email">Email*</label><br>
+                <input type="text" id = "email" name="email" placeholder = "Digite seu e-mail"><br>
+
+                <label for="telefone">Telefone*</label><br>
+                <input type="text" id = "telefone" name="telefone" placeholder = "Ex: (85)988776655"><br>
+
+                <label for="comentarios">Conte-nos mais sobre seus projetos</label><br>
+                <textarea id="comentarios" name="comentarios" rows="5" cols="50" placeholder="Insira seu comentário aqui!"></textarea><br><br>
+
+                <button type="submit" class="animado">Enviar</button>
+            </form>
+        </div>
+
+    </section>
+</main>
+
+<!-- Início do rodapé -->
+<footer class="footer">
+  <!-- Contém todo o conteúdo do rodapé -->
+  <div class="footer-container">
+    <!-- Texto com o nome da empresa e direitos autorais -->
+    <p><strong>© Horizon Tecnologia LTDA.</strong></p>
+    <!-- Lista com os links do rodapé -->
+    <ul class="footer-links">
+      <li><a href="../../index.html">Página inicial</a></li>        <!-- Link para a página "Página inicial" -->
+      <li><a href="validacao.html">Página de validação</a></li>        <!-- Link para a página "Validação" -->
+      <li><a href="sobre.html">Sobre nós</a></li>        <!-- Link para a página "Sobre nós" -->
+    </ul>
+  </div>
+  <!-- Fim do container -->
+</footer>
+<!-- Fim do rodapé -->
+</body>
+</html>

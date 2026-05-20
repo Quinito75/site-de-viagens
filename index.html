@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 
-    <Header> <!--Parte superior do site, contendo nome e butões que irão redirecionar a outro site-->
+    <header> <!--Parte superior do site, contendo nome e butões que irão redirecionar a outro site-->
+        <div class="logo"></div> <!--Div que vai virar logo -->
         <p>Horizon</p>
         <nav>
             <ul>
-                <li><a href="pages/contatos.html">Contato</a></li>
-                <li><a href="">Produtos</a></li>
+                <li><a class="btn-demo" href="src/pages/contato.html">Contato</a></li>
+                <li><a class="btn-demo" href="src/pages/sobre.html">Sobre</a></li>
             </ul>
         </nav>
-    </Header>
+    </header>
 
     <main>
-        <section> <!--Primeira sessão do site-->
+        <section class="primeirasessao"> <!--Primeira sessão do site-->
 
-            <div> <!--Parte esquerda da primeira sessão-->
-                <h1>Software de reserva com pontos para agências</h1>
+            <div class="left"> <!--Parte esquerda da primeira sessão-->
+                <h1>Software de <span id="textoroxo">reserva com pontos</span> para agências</h1>
                 <p>Busque, compare e emita passagens aéreas usando milhas e programas de fidelidade — com regras, tarifas e disponibilidade unificadas.</p>
                 <div>
-                    <a href="">Fale conosco</a>
-                    <a href="">Produtos</a>
-                </div>
-
-                <div>
-                    <ul>
+                    <ul class="beneficios">
                         <li><strong>12min </strong>tempo médio por emissão</li>
                         <li><strong>+37% </strong>margem por bilhete</li>
                         <li><strong>API </strong>pronta para integrar</li>
@@ -38,7 +37,7 @@
                 </div>
             </div>
             
-            <div> <!--Parte Direita da primeira sessão-->
+            <div class="right"> <!--Parte Direita da primeira sessão-->
                 <article>
                     <h3>Pesquisa unificada</h3>
                     <p>Nosso buscador conecta múltiplos programas (Smiles, Latam Pass, TAP, etc.)</p>
@@ -57,10 +56,10 @@
 
         </section>
 
-        <section> <!--Segunda sessão do site-->
+        <section class="segundasessao"> <!--Segunda sessão do site-->
 
-            <div>
-                <h2>Feito para Agências de viagens</h2>
+            <div class="left">  <!--Parte esquerda da segunda sessão-->
+                <h2>Feito para <span id="textoroxo">Agências de viagens</span></h2>
                 <p>Trabalhe em escala com filas de pesquisa, múltiplos atendentes, aprovações e relatórios. Nosso motor calcula automaticamente a melhor combinação de pontos e tarifas para o seu cliente.</p>
                 <ul>
                     <li>Pesquisa multi-programas e multi-trechos</li>
@@ -71,7 +70,7 @@
                 </ul>
             </div>
 
-            <div> <!--Parte esquerda da segunda sessão-->
+            <div class="right"> <!--Parte direita da segunda sessão-->
                 <article>
                     <h3>Dashboard</h3>
                     <p>KPIs por canal, companhia e programa de pontos.</p>
@@ -96,53 +95,37 @@
 
         </section>
 
-        <section> <!--Terceira sessão do site-->
-            <h2>Benefícios principais</h2>
-            
-                <article>
-                    <h3>Velocidade</h3>
-                    <p>Pesquisa paralela e cache inteligente aceleram o atendimento.</p>
-                </article>
+    <section class="terceirasessao"> <!--Terceira sessão do site - atualizada-->
 
-                <article>
-                    <h3>Economia</h3>
-                    <p>Comparador de rotas acha combinações com menos pontos.</p>
-                </article>
-                
-                <article>
-                    <h3>Confiabilidade</h3>
-                    <p>Logs de emissão e auditoria para evitar divergências.</p>
-                </article>
-                
-                <article>
-                    <h3>Escala</h3>
-                    <p>Multiusuário, filas e permissões por papel.</p>
-                </article>
-
-        </section>
-
-        <footer>
-
-            <div>
-                <h3>Horizon</h3>
-                <p>© Rewards Booking Tecnologia LTDA. </p>
-            </div>
-
-            <div>
-                <ul>
-                    <li>Solução</li>
-                    <li>Benefícios</li>
-                    <li>Como funciona</li>
-                    <li>Planos</li>
-                    <li>Contato</li>
-                </ul>
-            </div>
-
-        </footer>
-
-
-
+        <div class="centro">  <!--Parte esquerda da terceira sessão-->
+            <h2>Principais <span id="textoroxo">Benefícios</span></h2>
+            <p>Uma plataforma pensada para reduzir tempo de atendimento, cortar custos e garantir conformidade em cada emissão — tudo com integração fácil à sua operação.</p>
+            <ul>
+                <li>Busca acelerada com cache e paralelismo</li>
+                <li>Menor consumo de pontos com rotas otimizadas</li>
+                <li>Auditoria completa de emissões</li>
+                <li>Escalabilidade por equipe e filial</li>
+            </ul>
+        </div>
+        
+    </section>
     </main>
 
+    <!-- Início do rodapé -->
+    <footer class="footer">
+      <!-- Contém todo o conteúdo do rodapé -->
+      <div class="footer-container">
+        <!-- Texto com o nome da empresa e direitos autorais -->
+        <p><strong>© Horizon Tecnologia LTDA.</strong></p>
+        <!-- Lista com os links do rodapé -->
+        <ul class="footer-links">
+          <li><a href="index.html">Página inicial</a></li>        <!-- Link para a página "Página inicial" -->
+          <li><a href="src/pages/validacao.html">Página de validação</a></li>     <!-- Link para a página "Validação" -->
+          <li><a href="src/pages/contato.html">Contato</a></li>                   <!-- Link para a página "Contato" -->
+        </ul>
+      </div>
+      <!-- Fim do container -->
+    </footer>
+    <!-- Fim do rodapé -->
 </body>
 </html>

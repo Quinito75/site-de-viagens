@@ -1,0 +1,334 @@
+body {
+  margin: 0px;                                /* Margem */
+  padding: 0px;                              /* Preenchimento interno de um elemento */
+  color: rgb(255, 255, 255);                             /* Cor do texto */
+  align-items: center; /*centraliza verticalmente os itens */
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-position: center bottom;       /* Deixa central*/
+  background-color: rgb(255, 255, 255);                    /* Cor padrão de fundo */
+  height: 100vh;                          /* VH significa viewport height, é a unidade de medida do CSS */
+}
+
+header {
+
+    background-color: white;
+    color: black; /* Muda o texto para branco */
+    display: flex; /* deixa os itens dispostos em fila */
+    align-items: center; /*centraliza verticalmente os itens */
+
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: black; /* fundo preto para combinar com o texto preto */
+    position: relative;
+    margin-left: 2rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+.logo::before {  /* Logo feita com IA */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, transparent 48%, white 50%, white 52%, transparent 54%);
+}
+
+nav {
+    margin-right: 2rem;
+    margin-left: auto; /* deixa a nav a direita do header */
+
+}
+
+nav ul {
+    list-style-type: none; /* retira bullet points da lista */
+    display: flex; /* deixa os itens dispostos em fila */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* retira linha sublihado */
+}
+
+nav ul li a:hover {
+    color: rgb(162, 0, 255); /* Cor de hover */
+}
+
+header p {
+    margin-left: 0rem;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btn-demo {
+  background-color: blueviolet; /* Roxo padrão */
+  color: white !important; /* Deixa o testo dos botões branco */
+  font-weight: 600;
+  padding: 10px 20px; /* Tamanho do botão */
+  border-radius: 8px; /* Arredonda as bordas */
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+.btn-demo:hover { /* Efeito hover */
+  background-color: rgb(156, 28, 235);
+  transform: translateY(-2px); /* Eleva o botão */
+}
+
+
+.btn-demo:active { /* Efeito ao clicar */
+  background-color: rgb(136, 19, 194);
+  transform: translateY(0); /* volta o botão para posição inicial no momento do clique */
+}
+
+main{
+  margin: 0%;
+  padding:0%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 0px;
+}
+
+.sobre-nos {
+  background-image: url('../images/background-oficial2.png');  /* Nome da imagem, a link dela */
+  background-size: cover;                         /* Preenche toda a tela */
+  background-position: center;       /* Deixa central*/
+  background-repeat: no-repeat;                 /* Evita repetição da imagem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; /* espaço entre os blocos */
+  padding: 120px 0px 220px;
+}
+
+.sobre-nos h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 60px;
+  padding-left: 155px;
+}
+
+.sobre-nos p {
+margin-left: 170px;
+}
+
+
+
+/* estilo geral dos blocos */
+.bloco {
+  max-width: 490px;          /* define uma largura máxima */
+  text-align: justify;      /* deixa o texto justificado */
+  padding: 0px 20px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.bloco p {
+  font-size: 20px; /* ajusta para o tamanho desejado */
+  line-height: 1.4; /* melhora o espaçamento entre linhas */
+}
+
+/* bloco alinhado à esquerda */
+.bloco-esquerda {
+  align-self: flex-start;  /* move o bloco para o lado esquerdo */
+}
+
+/* bloco alinhado à direita */
+.bloco-direita {
+  align-self: flex-end;    /* move o bloco para o lado direito */
+}
+
+.secao-pilares {
+  background-color: rgb(83, 14, 148);
+  padding: 90px 0px; /* Espaçamento superior e inferior */
+  padding-top: 3%; /* Espaço acima da caixa de "Como seguimos nossa missão */
+}
+
+.secao-pilares h2 {
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card:hover { /* Efeito hover */
+  background-color:rgba(0, 0, 0, 0.801);
+  transform: translateY(-2px);
+}
+
+.cards-container {
+    display: flex; /* Define o container como um Flexbox */
+    gap: 30px; /* Cria um espaço entre os cards */
+    max-width: 1200px; /* Limita a largura do container */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px; /* Padding nas laterais */
+}
+
+/* Estilização de Cada Card */
+.card {
+    flex: 1; /* Garante que todos os cards tenham larguras iguais */
+    background-color: blueviolet; /* Fundo branco do card */
+    border-radius: 16px; /* Cantos arredondados */
+    padding: 40px;
+    height: auto; /* Altura automática */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil, dando o efeito de "levantado" */
+    transition: transform 0.3s ease; /* Transição para um possível hover */
+    
+}
+
+/* Estilização dos textos dentro do card */
+.card h3 {
+    font-size: 24px;
+    color: #ffffff; /* Cor roxa (você pode ajustar para a sua tonalidade exata) */
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgb(255, 255, 255);
+}
+
+/* Responsividade (Para dispositivos móveis) */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Empilha os cards um sobre o outro em telas pequenas */
+        gap: 20px;
+    }
+    
+    .secao-pilares {
+        padding: 50px 0;
+    }
+}
+
+/* Seção "WE CREATE DIGITAL EXPERIENCES */
+.bloco-dev {
+  background-position-x: center; /* Deixa central*/
+  background-repeat: no-repeat;                 /* Evita repetição da imagem */
+  background-size: cover;                         /* Preenche toda a tela */
+  text-align: center;  
+  padding: 100px 0px 50px 0px; /*Dimesões internas do box*/
+  background-color: rgb(255, 255, 255);
+  color: rgb(18, 1, 34); /* Cor do texto */
+}
+
+.bloco-image {
+  background-image: url('../images/background-digital.png');  /* Nome da imagem, a link dela */
+  background-position-x: center; /* Deixa central*/
+  background-repeat: no-repeat;                 /* Evita repetição da imagem */
+  background-size: cover;                         /* Preenche toda a tela */
+  list-style: none;
+  margin: 0 0 0 0;
+  text-align: center;
+  padding: 100px 400px 10px 20px;
+  color: white; /* Cor do texto */
+}
+
+.bloco-image h2 {
+  font-size: 25px;
+}
+.bloco-image ul {
+  list-style: none;
+  padding: 10px 10px 10px 345px;
+}
+
+.bloco-image nav {
+  text-align: center;
+}
+
+.bloco-dev h2 {
+  font-size: 100px;
+  
+}
+a.btn-saibamais {
+  font-size: 20px;
+}
+
+.btn-saibamais {
+  background-color: rgb(156, 33, 218); /* Roxo padrão */
+  color: white !important; /* Deixa o testo dos botões branco */
+  font-weight: 800;
+  padding: 10px 30px; /* Tamanho do botão */
+  border-radius: 8px; /* Arredonda as bordas */
+  border: none;
+  text-align: center;      /* deixa o texto justificado */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-saibamais:hover { /* Efeito hover */
+  background-color: rgb(67, 16, 99); 
+  transform: translateY(-2px); /* Eleva o botão */
+  
+}
+
+.btn-saibamais:active { /* Efeito ao clicar */
+  background-color: rgb(35, 6, 63);
+  transform: translateY(0); /* volta o botão para posição inicial no momento do clique */
+}
+
+
+@keyframes fadein{ /*Serve para criar uma animação, e o nome dela se chama "fadein"*/
+    from {opacity: 0;} /*A opacidade vai de 0 (from) segundos para 1 segundo (to)*/
+    to {opacity: 1;} /*A opacidade vem de 0 (from) segundos para 1 segundo (to)*/
+}
+
+/* Estilo principal do rodapé */
+footer {
+  height: 60px;
+  position: relative;
+  background-color: rgb(255, 255, 255); /* Cor de fundo roxa */
+  color: rgb(0, 0, 0);             /* Cor de @Horizon Tecnologia LTDA*/
+  text-align: center;           /* Centraliza o texto e os links */
+  padding: 0px 0px;             /* Espaçamento interno (em cima e em baixo) */
+  bottom: 0;                  /* Posiciona o rodapé no fundo */
+  width: 100%;               /* Faz o rodapé ocupar toda a largura da página */
+}
+
+.footer p {
+  margin: 0;
+}
+
+
+/* Define o container interno do rodapé */
+.footer-container {
+  max-width: 1200px; /* Define uma largura máxima */
+  margin: 0 auto; /* Centraliza o conteúdo dentro do rodapé */
+}
+
+.footer-container p {
+  height: 10px;
+}
+
+/* Remove a formatação padrão da lista e organiza os links */
+.footer-links {
+  list-style: none;             /* Remove os marcadores da lista */
+  padding: 0;                  /* Remove o espaçamento interno */
+  margin: 15px 0 0 0;          /* Define uma margem superior de 15px */
+  display: flex;             /* Usa o modelo flexbox para organizar os itens */
+  justify-content: center;  /* Centraliza os Links horizontalmente */
+  flex-wrap: wrap;         /* Permite que os links quebrem linha se a tela for pequena*/
+  gap: 15px;               /* Define um espaçamento entre os links */
+}
+
+/* Estiliza os links do rodapé */
+.footer-links a {
+  color: rgb(0, 0, 0);        /* Cor branca para os links Página inicial e Sobre */
+  text-decoration: none;    /* Remove o sublinhado */
+  font-weight: 500;        /* Define uma espessura média da fonte */
+  transition: color 0.3s; /* Cria um efeito de transição suave ao passar o mouse*/
+}
+
+/* Efeito de hover (quando o utilizador passa o mouse sobre o link) */
+.footer-links a:hover {
+  color: blueviolet; /* Cor visível quando o mouse estiver em cima de Solução, Benefícios, como funciona e Contato */
+}

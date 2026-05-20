@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Texto da página em Português-BR -->
+<head>
+    <meta charset="UTF-8"> <!-- Configuração de letra -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a organização</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/sobre.css">
+    <script src="../js/sobre.js" defer></script>
+
+    <!-- Necessário para subir um diretório e acessar o CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header> <!--Parte superior do site, contendo nome e butões que irão redirecionar a outro site-->
+        <div class="logo"></div> <!--Div que vai virar logo -->
+        <p>Horizon</p>
+        <nav>
+            <ul>
+                <li><a class="btn-demo" href="../../index.html">Inicio</a></li>
+                <li><a class="btn-demo" href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <section class="sobre-nos">
+        <div class="bloco bloco-centro">
+            <h2>ABOUT HORIZON</h2>
+            <p>Smart solutions for ambitious ideas.</p>
+        </div>
+    </section>
+    
+    <section class="secao-pilares">
+            <h2>Como seguimos nossa missão?</h2> 
+            <div class="cards-container">   
+                <div class="card" data-aos="fade-up">
+                    <h3>Nossa motivação</h3>
+                    <p>Com base nos nossos princípios éticos e sustentáveis, queremos criar impacto positivo na vida dos nossos clientes.</p>
+                </div> 
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Nossos pilares</h3>
+                    <p>A ética e a integridade são valores inegociáveis. Compliance, ESG e o nosso Código de Conduta são pilares que tornam nossa missão possível.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Nosso dever</h3>
+                    <p>Garantimos que cada solução e ação reflitam nossos princípios de ética e integridade, permitido que as equipes se inovem e cresçam de forma sustentável.</p>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          duration: 800, // Duração padrão da animação em ms
+          once: true    // Se deve animar apenas uma vez
+      });
+    </script>
+
+    <section class="bloco-dev">
+        <div>
+            <h2>WE CREATE {<br>DIGITAL EXPERIENCES};</h2>
+        </div>
+    </section>
+
+    <section class="bloco-image">
+        <div>
+            <h2>ENTRE EM CONTATO COM<br>UM DE NOSSOS ESPECIALISTAS!
+            </h2>
+        <nav>
+            <ul>
+                <li><a class="btn-saibamais" href="contato.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+        </div>
+    </section>
+</main>
+
+<!-- Início do rodapé -->
+<footer class="footer">
+  <!-- Contém todo o conteúdo do rodapé -->
+  <div class="footer-container">
+    <!-- Texto com o nome da empresa e direitos autorais -->
+    <p><strong>© Horizon Tecnologia LTDA.</strong></p>
+    <!-- Lista com os links do rodapé -->
+    <ul class="footer-links">
+      <li><a href="../../index.html">Página inicial</a></li>        <!-- Link para a página "Página inicial" -->
+      <li><a href="validacao.html">Página de validação</a></li>     <!-- Link para a página "Validação" -->
+      <li><a href="contato.html">Contato</a></li>                   <!-- Link para a página "Contato" -->
+    </ul>
+  </div>
+  <!-- Fim do container -->
+</footer>
+<!-- Fim do rodapé -->
+</body>
+</html>
